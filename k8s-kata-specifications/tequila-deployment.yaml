@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tequila-deployment
+  labels:
+    app: kata-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kata-app
+  template:
+    metadata:
+      labels:
+        app: kata-app
+    spec:
+      containers:
+        - name: kata-app
+          image: georgeabot/tequila-app:1.0.2
+          ports:
+            - containerPort: 3000
+          env:
+            
+            - name: MONGODB_CONNECTION_STRING
+              valueFrom:
+                configMapKeyRef:
+                  name: tequila-configmap
+                  key: database_url
+
+            - name: TEQUILA_APIKEY
+              valueFrom:
+                secretKeyRef:
+                  name: tequila-secret
+                  key: TEQUILA_APIKEY
+
+            - name: LABAIR_APIKEY
+              valueFrom:
+                secretKeyRef:
+                  name: tequila-secret
+                  key: LABAIR_APIKEY
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tequila-service
+spec:
+  selector:
+    app: kata-app
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+  

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/master.css">
+    <title>Flight Details</title>
+</head>
+<body>
+    <div class="box" id="heading">
+        <H1>Recent Flight Searches</H1>
+    </div>
+    {% if flight_data %}
+    {% for flight in flight_data %}
+        <div class="box">
+            <div class="item">
+                <p><strong>
+                    {{ flight.cityFrom }} → {{flight.cityTo }}<br></strong>
+                    Price: <strong>{{flight.price }}</strong> <br>
+                    Deeplink: <strong><a href= {{ flight.booking_link }} target="_blank" >booking</a></strong>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+   {%  else %} 
+    <div class="box" id="heading">
+        <H1>No Recent Searches</H1>
+    </div>
+    <div class="itemB">
+         <button class="btn"><a href="/flights">New Search ?</a></button>
+    </div>
+    
+   {% endif %}
+</body>
+</html>

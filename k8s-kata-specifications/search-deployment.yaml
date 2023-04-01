@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: search-deployment
+  labels:
+    app: search-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: search-app
+  template:
+    metadata:
+      labels:
+        app: search-app
+    spec:
+      containers:
+        - name: search-app
+          image: georgeabot/search-app:1.0.2
+          ports:
+            - containerPort: 5000
+          env:
+            - name: SEARCH_FLIGHT_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: tequila-configmap
+                  key: tequila_url
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: search-service
+spec:
+  type: NodePort
+  selector:
+    app: search-app
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+  

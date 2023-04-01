@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/master.css">
+    <title>Flight Details</title>
+</head>
+<body>
+
+    {% if flight_data.flag == 1 %}
+        <div class="box" id="heading">
+            <H1> {{ flight_data.cityFrom + ' → ' + flight_data.cityTo }} </H1>
+        </div>
+        <h2 >Trip Summary</h2>
+        <div class="box">
+            <div class="item">
+                <p>Fly From: <strong>{{ flight_data.flyFrom }}</strong></p>
+            </div>
+            <div class="item">
+                <p>Fly To: <strong>{{flight_data.flyTo }}</strong></p>
+            </div>
+            <div class="item">
+                <p>Price: <strong>{{flight_data.price }}</strong></p>
+            </div>
+            <div class="item">
+                <p>Max Price: <strong>{{ flight_data.targetAmount }}</strong></p>
+            </div>
+            <div class="item">
+                <p>Airline: <strong>{{ flight_data.airline }} </strong></p>
+            </div>
+            <div class="item">
+                <p>Seats: <strong>{{ flight_data.seats }} </strong></p>
+            </div>
+            <div class="item">
+                <p>Departure: <strong> {{ flight_data.local_departure }} </strong></p>
+            </div>
+            <div class="item">
+                <p>Arrival: <strong> {{ flight_data.local_arrival }} </strong></p>
+            </div>
+            <div class="item">
+                <p>Deeplink: <a href= {{ flight_data.booking_link }} target="_blank" >book</a></p>
+            </div>
+           
+        </div>
+   {%  else %} 
+    <div class="box" id="heading">
+        <H1> {{ flight_data.fromCity+ ' → ' + flight_data.toCity }} </H1>
+    </div>
+    <div class="box">
+        <div class="item">
+            <p>Success: <strong>{{ flight_data.success }} </strong></p>
+        </div>
+        <div class="item">
+            <p>Msg: <strong>{{ flight_data.msg }}</strong></p>
+        </div> 
+
+    </div>
+        <div class="itemB">
+            <button class="btn"><a href="/">New Search ?</a></button>
+     </div>
+    
+   {% endif %}
+</body>
+</html>

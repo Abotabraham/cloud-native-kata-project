@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/master.css">
+    <title>Flight Finder</title>
+</head>
+<body>
+    <div class="form-container">
+        <form action="/flight" method="post">
+           <input class="text-input"type="text" name="from_city" placeholder="Enter your Departure City" autofocus required> <br>
+           <input class="text-input"type="text" name="to_city" placeholder="Enter your Destination City " required> <br>
+           <input class="text-input" type="text" name="price" placeholder="Enter your Lowest Price" required><br>
+           <input class="btn-input" type="submit" value="Submit">
+
+        </form>
+    </div>
+</body>
+</html>

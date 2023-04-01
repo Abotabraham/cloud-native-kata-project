@@ -1,0 +1,151 @@
+html {
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+    font-family: 'helvetica neue';
+  }
+  
+  h1 {
+    color: #fff;
+   /* font-size: 40px; */
+    padding: 10px;
+  }
+
+  h2 {
+    color: #fff;
+    background-color: #A683E3;
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  .box {
+    max-width: 500px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  }
+  
+  #heading {
+    background-color: #A683E3;
+    text-align: center;
+  }
+  
+  .item {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F1F1F1;
+
+  }
+
+  .itemB {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 0;
+    margin: 0 auto;
+  }
+  
+  .item:last-child {
+    border-bottom: 0;
+  }
+  
+  p {
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #00204a;
+  }
+  
+  .btn {
+    background-color: #fff;
+    padding: 15px 50px;
+    border: 1px solid transparent;
+    text-align: center;
+    border-radius: 8px;
+    line-height: 1.33;
+    letter-spacing: .5px;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 200;
+    
+}
+
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #2C3333;
+    font-family: lato;   
+}
+ 
+  
+  input[type="text"] {
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: 200;
+    width: 313px;
+  }
+
+
+  .form-container {
+    width: 50%;
+    margin: 280px auto;
+    text-align: center;
+  
+ }
+
+.text-input {
+    width: 500px;
+    border-radius: 8px;
+    padding: 17px 182px 19px 12px;
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.33;
+    letter-spacing: .5px;
+    max-width: 100%;
+    color: black;
+    width: 75%;
+    outline: 0;
+    border: 1px solid transparent;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-input {
+    background-color: #fff;
+    font-family: lato;
+    padding: 15px 50px;
+    border: 1px solid transparent;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.33;
+    letter-spacing: .5px;
+    color: #00354a;
+    
+}
+
+
+.btn-input:hover {
+    cursor: pointer;
+    background-color: #2C3333;
+    font-family: lato;
+    
+}
+  
+ 
+  
