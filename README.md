@@ -39,29 +39,29 @@ The user can perform the following operations:
 ## Run the app in Kubernetes
 To run the app in Kubernetes, Docker for Desktop Mac or Windows is required. The folder k8s-kata-specifications contains all the YAML files for the app. The app microservices should be deployed in the following order:
 1. Deploy the tequila-configMap and tequila-secret. The components should be available before deploying tequila-deployment by the following command:
-
+```
     kubectl apply -f tequila-configMap.yaml -f tequila-secret.yaml
-
+```
 2. Deploy the mongo-deployment
-
+```
     kubectl apply -f mongo-depl.yaml
-
+```
 3. Deploy tequila-deployment 
-    
+ ```   
     kubectl apply -f teemo-deployment.yaml
-
+```
 4. Deploy cache-deployment
-
+```
     kubectl apply -f cache-deployment.yaml
-
+```
 5. Deploy search-deployment
-
+```
     kubectl apply -f search-deployment.yaml
-
+```
 6. Deploy view-deployment
-
+```
     kubectl apply -f view-deployment.yaml
-
+```
 Once all the services have been deployed, The search app will be running at http://localhost:5000, and the results will be at http://localhost:8080/flights.
 
 ## Flight Finder Architecture
