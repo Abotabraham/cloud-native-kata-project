@@ -1,0 +1,23 @@
+html,body {
+    background-color: #E4E9FD;
+    font-family: 'helvetica neue';
+  }
+
+
+  .form-container {
+    width: 50%;
+    margin: 280px auto;
+    text-align: center;
+    /* background-color: #E4E9FD; */
+  
+ }
+
+ .btn {
+        padding: 12px 32px;
+        margin-top: 20px;
+        border-radius: 52px;
+        background-color: #cbf036;
+        color: #101010;
+        font-family: Helvetica Neue, sans-serif;
+        font-size: 18px;
+ }

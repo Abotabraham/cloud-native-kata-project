@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: kata-app
-          image: georgeabot/tequila-app:1.0.2
+          image: georgeabot/tequila-microservice:1.0.0
           ports:
             - containerPort: 3000
           env:

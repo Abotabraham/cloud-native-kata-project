@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: view-app
-          image: georgeabot/view-app:1.0.0
+          image: georgeabot/view-microservice:1.0.0
           ports:
             - containerPort: 8080
           env:

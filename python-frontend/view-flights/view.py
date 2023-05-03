@@ -3,7 +3,12 @@ from flask import Flask, render_template, request
 import requests
 
 FLIGHTS_ENDPOINT = os.environ.get('VIEW_FLIGHTS_URL')
+
 app = Flask(__name__)
+
+@app.route("/", methods=["GET"])
+def viewHome():
+    return render_template("view.html")
 
 @app.route("/flights", methods=["GET"])
 def getFlight():

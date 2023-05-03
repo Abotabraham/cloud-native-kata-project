@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: cache-app
-          image: georgeabot/view-microservice
+          image: georgeabot/cache-microservice:1.0.0
           ports:
             - containerPort: 4040
           env:

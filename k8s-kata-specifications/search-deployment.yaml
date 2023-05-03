@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: search-app
-          image: georgeabot/search-app:1.0.2
+          image: georgeabot/search-microservice:1.0.0
           ports:
             - containerPort: 5000
           env:

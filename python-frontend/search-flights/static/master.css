@@ -1,7 +1,10 @@
-html {
+html,body {
     background-color: #E4E9FD;
-    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
     font-family: 'helvetica neue';
+  }
+
+  form {
+    margin-left: 120px;
   }
   
   h1 {
@@ -17,7 +20,7 @@ html {
     margin: 50px auto;
     text-align: center;
     border-radius: 5px;
-    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3); */
     padding: 5px;
   }
   a {
@@ -29,12 +32,27 @@ html {
     margin: 20px auto;
     background: white;
     border-radius: 5px;
-    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3); */
   }
   
   #heading {
     background-color: #A683E3;
     text-align: center;
+  }
+
+  .top {
+    max-width: 500px;
+    margin: 20px 20px auto;
+    background: white;
+    border-radius: 5px;
+    margin-left: 530px;
+    /* box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3); */
+  }
+  
+  #top_id {
+    background-color: #A683E3;
+    text-align: center;
+    margin-top: 50px;
   }
   
   .item {
@@ -80,6 +98,25 @@ html {
     
 }
 
+.btn-details {
+  background-color: #A683E3;
+  padding: 15px 50px;
+  border: 1px solid transparent;
+  text-align: center;
+  border-radius: 8px;
+  line-height: 1.33;
+  letter-spacing: .5px;
+  color: #fff;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 200;
+  
+}
+.btn-details:hover {
+  cursor: pointer;
+  background-color: #2C3333;
+  font-family: lato;   
+}
 
 .btn:hover {
     cursor: pointer;
@@ -101,7 +138,7 @@ html {
 
   .form-container {
     width: 50%;
-    margin: 280px auto;
+    margin: 70px auto;
     text-align: center;
   
  }
@@ -109,7 +146,7 @@ html {
 .text-input {
     width: 500px;
     border-radius: 8px;
-    padding: 17px 182px 19px 12px;
+    padding: 5px 182px 5px 182px;
     font-family: lato;
     font-size: 18px;
     font-weight: 500;
